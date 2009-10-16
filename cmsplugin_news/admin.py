@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from news.models import News
+from cmsplugin_news.models import News
 
 class NewsAdmin(admin.ModelAdmin):
     date_hierarchy = 'pub_date'

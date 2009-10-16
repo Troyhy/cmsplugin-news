@@ -3,7 +3,7 @@ from django.core.urlresolvers import reverse
 
 from cms.utils.navigation import NavigationNode
 
-from news.models import News
+from cmsplugin_news.models import News
 
 def get_nodes(request):
     res = []

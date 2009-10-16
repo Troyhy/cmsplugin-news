@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 
-from news.models import News
+from cmsplugin_news.models import News
 
 news_info_dict = {
     'queryset': News.published.all(),
