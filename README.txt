@@ -24,6 +24,10 @@ Setup
 
 Todo and Tomaybes:
 - Add tests
+- add cms_plugins.py for plugins
+ - latest X news items block for in a sidebar
+ - month view with days that link to archive_day view
+- add setup.py for easyinstall / pip
 - Allow comments on news (add option to the news model for it)
 - Add migrations
 - Optimize the navigation code, it works but there is probably a better way to do it.

@@ -3,6 +3,8 @@ import datetime
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
+from cms.models import CMSPlugin
+
 class PublishedNewsManager(models.Manager):
     """
         Filters out all unpublished and items with a publication date in the future
@@ -46,3 +48,9 @@ class News(models.Model):
                                      'day': self.pub_date.strftime("%d"),
                                      'slug': self.slug })
     
+class LatestNewsPlugin(CMSPlugin):
+    """
+        Model for the settings when using the latest news cms plugin
+    """
+    limit = models.PositiveIntegerField(_('Number of news items to show'), 
+                    help_text=_('Limits the number of items that will be displayed'))

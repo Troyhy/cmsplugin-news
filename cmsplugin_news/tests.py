@@ -1,23 +1,30 @@
 """
-This file demonstrates two different styles of tests (one doctest and one
-unittest). These will both pass when you run "manage.py test".
-
-Replace these with more appropriate tests for your application.
+Tests for the cmsplugin_news app
 """
 
 from django.test import TestCase
 
-class SimpleTest(TestCase):
-    def test_basic_addition(self):
+class NewsTest(TestCase):
+    def setUp(self):
+        pass  
+        
+    def tearDown(self):
+        pass
+        
+    def test_unpublished(self):
         """
-        Tests that 1 + 1 always equals 2.
+            Test if unpublished items are hidden by default
         """
-        self.failUnlessEqual(1 + 1, 2)
-
-__test__ = {"doctest": """
-Another way to test that 1 + 1 is equal to 2.
-
->>> 1 + 1 == 2
-True
-"""}
-
+        pass
+        
+    def test_future_published(self):
+        """
+            Tests that items with a future published date are hidden
+        """
+        pass
+        
+    def test_navigation(self):
+        """
+            Tests if the navigation build by navigation.get_nodes is correct
+        """
+        pass
