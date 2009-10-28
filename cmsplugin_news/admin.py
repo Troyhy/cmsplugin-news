@@ -5,7 +5,7 @@ from django.contrib import admin
 from django.http import HttpResponse
 from django.core import serializers
 
-
+from cmsplugin_news.forms import NewsForm
 from cmsplugin_news.models import News
     
 class NewsAdmin(admin.ModelAdmin):
@@ -18,6 +18,7 @@ class NewsAdmin(admin.ModelAdmin):
     list_filter = ('is_published', )
     search_fields = ['title', 'content']
     prepopulated_fields = {'slug': ('title',)}
+    form = NewsForm
     
     actions = ['make_published', 'make_unpublished']
     

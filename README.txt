@@ -7,6 +7,7 @@ Download: http://bitbucket.org/MrOxiMoron/cmsplugin-news/
 Requirements:
 - django-cms-2.0: rev 2b59edde3cf1c140edfb14b544f2fbcbd56073f8
 - django: 1.1.1
++ requirements for django-cms-2.0
 
 Last tested with:
 - django-cms-2.0: rev 2b59edde3cf1c140edfb14b544f2fbcbd56073f8
@@ -19,20 +20,19 @@ Setup
 - run 'python manage.py syncdb'
 - Add the cmsplugin_news.urls to the CMS_APPLICATIONS_URLS setting 
 - Add the cmsplugin_news.navigation.get_nodes to the CMS_NAVIGATION_EXTENDERS setting
-- Create a page and link the application and navigation to it.
+- Create a page and link the application and navigation to it. (Restart of the server required due to caching!)
 - Create the propper templates for your site, the ones included with the app are VERY basic
 
 Todo and Tomaybes:
-- Add tests
-- add cms_plugins.py for plugins
- - latest X news items block for in a sidebar
+- Use the textplugin's way of using a editor for the content (WYMEditor done, still needs tinymce)
+- Add more tests
+- add to cms_plugins.py for plugins
  - month view with days that link to archive_day view
 - add setup.py for easyinstall / pip
 - Allow comments on news (add option to the news model for it)
 - Add migrations
 - Optimize the navigation code, it works but there is probably a better way to do it.
 - Add RSS feed
-- Use the textplugin's way of using a editor for the content
 - Add excerpt
 - Add optional author field
 - Add optional end date to hide news again
