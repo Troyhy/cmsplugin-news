@@ -10,7 +10,7 @@ Requirements:
 + requirements for django-cms-2.0
 
 Last tested with:
-- django-cms-2.0: rev 2b59edde3cf1c140edfb14b544f2fbcbd56073f8
+- django-cms-2.0: rev 276bae54e2184187db7e71f2aab54121db7c729d
 - django: 1.1.1
 
 Setup
@@ -24,7 +24,6 @@ Setup
 - Create the propper templates for your site, the ones included with the app are VERY basic
 
 Todo and Tomaybes:
-- Use the textplugin's way of using a editor for the content (WYMEditor done, still needs tinymce)
 - Add more tests
 - add to cms_plugins.py for plugins
  - month view with days that link to archive_day view
@@ -48,3 +47,8 @@ CMS_APPLICATIONS_URLS = (
 CMS_NAVIGATION_EXTENDERS = (
     ('cmsplugin_news.navigation.get_nodes','News navigation'),
 )
+
+
+Suggestion:
+To avoid confusion add a "application" template to the CMS which is like other templates but without any placeholders.
+That way users won't get tempted to fill the placeholders and then complain they don't show up ;-)
