@@ -22,6 +22,7 @@ class News(models.Model):
     title           = models.CharField(_('Title'), max_length=255)
     slug            = models.SlugField(_('Slug'), unique_for_date='pub_date', 
                         help_text=_('A slug is a short name which uniquely identifies the news item for this day'))
+    excerpt         = models.TextField(_('Excerpt'), blank=True)
     content         = models.TextField(_('Content'), blank=True)
     
     is_published    = models.BooleanField(_('Published'), default=False)

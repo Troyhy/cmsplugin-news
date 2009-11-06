@@ -16,7 +16,7 @@ class NewsAdmin(admin.ModelAdmin):
     list_display = ('slug', 'title', 'is_published', 'pub_date')
     #list_editable = ('title', 'is_published')
     list_filter = ('is_published', )
-    search_fields = ['title', 'content']
+    search_fields = ['title', 'excerpt', 'content']
     prepopulated_fields = {'slug': ('title',)}
     form = NewsForm
     
