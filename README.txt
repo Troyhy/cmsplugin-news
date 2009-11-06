@@ -32,7 +32,6 @@ Todo and Tomaybes:
 - Add migrations
 - Optimize the navigation code, it works but there is probably a better way to do it.
 - Add RSS feed
-- Add excerpt
 - Add optional author field
 - Add optional end date to hide news again
 - Add Tags
