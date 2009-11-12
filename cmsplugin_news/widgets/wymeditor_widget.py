@@ -4,13 +4,13 @@ from django.utils.safestring import mark_safe
 from django.template.loader import render_to_string
 from django.forms import Textarea
 
-from django.conf.settings import CMS_MEDIA_URL
+from django.conf import settings
 from cms.plugins.text import settings as text_settings
 from django.utils.translation.trans_real import get_language
 
 class WYMEditor(Textarea):
     class Media:
-        js = [join(CMS_MEDIA_URL, path) for path in (
+        js = [join(settings.CMS_MEDIA_URL, path) for path in (
             'js/lib/jquery.js',
             'wymeditor/jquery.wymeditor.js',
             'wymeditor/plugins/resizable/jquery.wymeditor.resizable.js',
@@ -36,7 +36,7 @@ class WYMEditor(Textarea):
         context = {
             'name': name,
             'language': language,
-            'CMS_MEDIA_URL': CMS_MEDIA_URL,
+            'settings.CMS_MEDIA_URL': settings.CMS_MEDIA_URL,
             'WYM_TOOLS': mark_safe(text_settings.WYM_TOOLS),
             'WYM_CONTAINERS': mark_safe(text_settings.WYM_CONTAINERS),
             'WYM_CLASSES': mark_safe(text_settings.WYM_CLASSES),
