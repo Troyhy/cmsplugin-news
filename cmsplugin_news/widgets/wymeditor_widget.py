@@ -4,7 +4,7 @@ from django.utils.safestring import mark_safe
 from django.template.loader import render_to_string
 from django.forms import Textarea
 
-from cms.settings import CMS_MEDIA_URL
+from django.conf.settings import CMS_MEDIA_URL
 from cms.plugins.text import settings as text_settings
 from django.utils.translation.trans_real import get_language
 

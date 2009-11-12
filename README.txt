@@ -5,12 +5,12 @@ Description: A news plugin for django-cms
 Download: http://bitbucket.org/MrOxiMoron/cmsplugin-news/
 
 Requirements:
-- django-cms-2.0: rev 2b59edde3cf1c140edfb14b544f2fbcbd56073f8
+- django-cms-2.0: rev 7353b46ba14dd30bf8db8d0981f35df5bde67fad
 - django: 1.1.1
 + requirements for django-cms-2.0
 
 Last tested with:
-- django-cms-2.0: rev 276bae54e2184187db7e71f2aab54121db7c729d
+- django-cms-2.0: rev ed053ba1bf875e5f5ca3a0e111bf572093c71222
 - django: 1.1.1
 
 Setup
@@ -27,9 +27,7 @@ Todo and Tomaybes:
 - Add more tests
 - add to cms_plugins.py for plugins
  - month view with days that link to archive_day view
-- add setup.py for easyinstall / pip
 - Allow comments on news (add option to the news model for it)
-- Add migrations
 - Optimize the navigation code, it works but there is probably a better way to do it.
 - Add RSS feed
 - Add optional author field

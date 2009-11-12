@@ -1,5 +1,5 @@
 from tinymce.widgets import TinyMCE, get_language_config
-from cms.settings import CMS_MEDIA_URL
+from django.conf.settings import CMS_MEDIA_URL
 from django.utils.translation import get_language
 from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
