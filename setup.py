@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='cmsplugin-news',
-    version='0.2a3',
+    version='0.2b',
     description='This is a news app/plugin for the django-cms 2',
     author='Harro van der Klauw',
     author_email='hvdklauw@gmail.com',
