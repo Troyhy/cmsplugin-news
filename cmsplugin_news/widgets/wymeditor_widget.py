@@ -36,7 +36,7 @@ class WYMEditor(Textarea):
         context = {
             'name': name,
             'language': language,
-            'settings.CMS_MEDIA_URL': settings.CMS_MEDIA_URL,
+            'CMS_MEDIA_URL': settings.CMS_MEDIA_URL,
             'WYM_TOOLS': mark_safe(text_settings.WYM_TOOLS),
             'WYM_CONTAINERS': mark_safe(text_settings.WYM_CONTAINERS),
             'WYM_CLASSES': mark_safe(text_settings.WYM_CLASSES),
