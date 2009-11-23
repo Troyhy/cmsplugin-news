@@ -5,12 +5,12 @@ Description: A news plugin for django-cms
 Download: http://bitbucket.org/MrOxiMoron/cmsplugin-news/
 
 Requirements:
-- django-cms-2.0: rev 7353b46ba14dd30bf8db8d0981f35df5bde67fad
+- django-cms-2.0.0 final
 - django: 1.1.1
 + requirements for django-cms-2.0
 
 Last tested with:
-- django-cms-2.0: rev ed053ba1bf875e5f5ca3a0e111bf572093c71222
+- django-cms-2.0.0 final
 - django: 1.1.1
 
 Setup
@@ -20,7 +20,7 @@ Setup
 - run 'python manage.py syncdb'
 - Add the cmsplugin_news.urls to the CMS_APPLICATIONS_URLS setting 
 - Add the cmsplugin_news.navigation.get_nodes to the CMS_NAVIGATION_EXTENDERS setting
-- Create a page and link the application and navigation to it. (Restart of the server required due to caching!)
+- Create a page in cms and in the 'advanced settings' section of the admin for that page, for 'Navigation extenders' select 'news navigation' and for 'application' select 'news' (Restart of the server required due to caching!)
 - Create the propper templates for your site, the ones included with the app are VERY basic
 
 Todo and Tomaybes:
