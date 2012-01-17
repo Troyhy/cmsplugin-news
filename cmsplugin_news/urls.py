@@ -17,20 +17,20 @@ news_info_month_dict = {
 }
 
 urlpatterns = patterns('django.views.generic.date_based',
-    (r'^$', 
-        'archive_index', news_info_dict, 'news_archive_index'),
+    url(r'^$', 
+        'archive_index', news_info_dict, name='news_archive_index'),
     
-    (r'^(?P<year>\d{4})/$', 
-        'archive_year', news_info_dict, 'news_archive_year'),
+    url(r'^(?P<year>\d{4})/$', 
+        'archive_year', news_info_dict, name='news_archive_year'),
     
-    (r'^(?P<year>\d{4})/(?P<month>\d{2})/$', 
-        'archive_month', news_info_month_dict, 'news_archive_month'),
+    url(r'^(?P<year>\d{4})/(?P<month>\d{2})/$', 
+        'archive_month', news_info_month_dict, name='news_archive_month'),
     
-    (r'^(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/$', 
-        'archive_day', news_info_month_dict, 'news_archive_day'),
+    url(r'^(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/$', 
+        'archive_day', news_info_month_dict, name='news_archive_day'),
     
-    (r'^(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<slug>[-\w]+)/$', 
-        'object_detail', news_info_month_dict, 'news_detail'),
+    url(r'^(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<slug>[-\w]+)/$', 
+        'object_detail', news_info_month_dict, name='news_detail'),
 
     url(r'^feed/$', feeds.NewsFeed())
 )
