@@ -18,6 +18,5 @@ setup(
         'Framework :: Django',
     ],
     include_package_data=True,
-    zip_safe=False,
-    install_requires=['setuptools', 'setuptools_bzr'],
+    zip_safe=False
 )
