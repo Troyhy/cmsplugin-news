@@ -3,6 +3,7 @@ from django.conf.urls.defaults import *
 from cmsplugin_news.models import News
 
 from . import feeds
+from . import views
 
 
 news_info_dict = {
@@ -18,7 +19,7 @@ news_info_month_dict = {
 
 urlpatterns = patterns('django.views.generic.date_based',
     url(r'^$', 
-        'archive_index', news_info_dict, name='news_archive_index'),
+        views.ArchiveIndexView.as_view(), news_info_dict, name='news_archive_index'),
     
     url(r'^(?P<year>\d{4})/$', 
         'archive_year', news_info_dict, name='news_archive_year'),
