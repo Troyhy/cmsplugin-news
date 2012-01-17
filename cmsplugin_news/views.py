@@ -1,6 +1,7 @@
 from django.views.generic import ListView
 
 from . import models
+from . import settings
 
 
 class ArchiveIndexView(ListView):
@@ -18,7 +19,7 @@ class ArchiveIndexView(ListView):
     date_based.archive_index view while the latter ones are provided by
     ListView.
     """
-    paginate_by = 15
+    paginate_by = settings.ARCHIVE_PAGE_SIZE
     queryset = models.News.published.all()
     template_name = 'cmsplugin_news/news_archive.html'
     include_yearlist = True

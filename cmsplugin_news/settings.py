@@ -17,4 +17,5 @@ DISABLE_LATEST_NEWS_PLUGIN = get_setting('DISABLE_LATEST_NEWS_PLUGIN', False)
 FEED_SIZE = get_setting('FEED_SIZE', 10)
 FEED_TITLE = get_setting('FEED_TITLE', _('News feed'))
 FEED_DESCRIPTION = get_setting('FEED_DESCRIPTION', _('A feed full of news'))
+ARCHIVE_PAGE_SIZE = get_setting('ARCHIVE_PAGE_SIZE', 15)
 
