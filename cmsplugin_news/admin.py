@@ -37,7 +37,7 @@ class NewsAdmin(admin.ModelAdmin):
         """
         rows_updated = queryset.update(is_published=True)
         self.message_user(request, ungettext('%(count)d newsitem was published', 
-                                            '%(count)d newsitems where published', 
+                                            '%(count)d newsitems were published', 
                                             rows_updated) % {'count': rows_updated})
     make_published.short_description = _('Publish selected news')
 
@@ -47,7 +47,7 @@ class NewsAdmin(admin.ModelAdmin):
         """
         rows_updated =queryset.update(is_published=False)
         self.message_user(request, ungettext('%(count)d newsitem was unpublished', 
-                                            '%(count)d newsitems where unpublished', 
+                                            '%(count)d newsitems were unpublished', 
                                             rows_updated) % {'count': rows_updated})
     make_unpublished.short_description = _('Unpublish selected news')
 
