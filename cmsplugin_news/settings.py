@@ -6,7 +6,7 @@ def get_setting(name, default):
     """
     A little helper for fetching global settings with a common prefix.
     """
-    parent_name = "CMSPLUGIN_NEWS_{}".format(name)
+    parent_name = "CMSPLUGIN_NEWS_{0}".format(name)
     return getattr(django_settings, parent_name, default)
 
 """
