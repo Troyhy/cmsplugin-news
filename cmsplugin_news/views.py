@@ -31,4 +31,3 @@ class ArchiveIndexView(ListView):
             date_list = self.get_queryset().dates('pub_date', 'year')[::-1]
             context['date_list'] = date_list
         return context
-

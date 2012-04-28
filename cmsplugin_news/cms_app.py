@@ -10,4 +10,3 @@ class NewsAppHook(CMSApp):
 
 
 apphook_pool.register(NewsAppHook)
-
