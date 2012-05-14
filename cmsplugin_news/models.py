@@ -31,7 +31,7 @@ class News(models.Model):
     content = models.TextField(_('Content'), blank=True)
 
     is_published = models.BooleanField(_('Published'), default=False)
-    pub_date = models.DateTimeField(_('Publication date'), default=datetime.datetime.now())
+    pub_date = models.DateTimeField(_('Publication date'), default=datetime.datetime.now)
 
     created = models.DateTimeField(auto_now_add=True, editable=False)
     updated = models.DateTimeField(auto_now=True, editable=False)
