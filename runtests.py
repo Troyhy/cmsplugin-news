@@ -5,6 +5,8 @@ from django.conf import settings
 
 
 def get_test_runner():
+    # This code is based on the new test-setup in django-cms 2.3
+    # https://raw.github.com/divio/django-cms/595d9092d95ceb45ae666b78a86a4c71ed395396/cms/test_utils/cli.py
     settings.configure(
         CACHE_BACKEND='locmem:///',
         DEBUG=True,
@@ -95,28 +97,15 @@ def get_test_runner():
         CMS_SOFTROOT=True,
         CMS_MODERATOR=True,
         CMS_PERMISSION=True,
-        CMS_PUBLIC_FOR='all',
         CMS_CACHE_DURATIONS={
             'menus': 0,
             'content': 0,
             'permissions': 0,
         },
-        CMS_APPHOOKS=[],
-        CMS_REDIRECTS=True,
-        CMS_SEO_FIELDS=True,
-        CMS_FLAT_URLS=False,
-        CMS_MENU_TITLE_OVERWRITE=True,
-        CMS_HIDE_UNTRANSLATED=False,
         CMS_URL_OVERWRITE=True,
-        CMS_SHOW_END_DATE=True,
-        CMS_SHOW_START_DATE=True,
-        CMS_PLUGIN_PROCESSORS=tuple(),
-        CMS_PLUGIN_CONTEXT_PROCESSORS=tuple(),
-        CMS_SITE_CHOICES_CACHE_KEY='CMS:site_choices',
-        CMS_PAGE_CHOICES_CACHE_KEY='CMS:page_choices',
         SOUTH_TESTS_MIGRATE=False,
         JUNIT_OUTPUT_DIR='.',
-        TIME_TESTS=False,
+        TIME_TESTS=True,
         CMS_TEMPLATES=[('test_template.html', 'base')],
         TEMPLATE_DIRS=[join(dirname(__file__), 'test_setup', 'templates')],
         ROOT_URLCONF='cmsplugin_news.urls'
