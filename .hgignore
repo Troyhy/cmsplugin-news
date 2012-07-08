@@ -2,3 +2,6 @@ syntax: glob
 *.pyc
 cmsplugin_news.egg-info
 dist
+MANIFEST
+README.html
+.tox
