@@ -1,13 +1,25 @@
-from setuptools import setup, find_packages
+from setuptools import setup
+
+
+base_requirements = [
+    'django-cms >= 2.0, < 3.0'
+]
+install_requirements = base_requirements + []
+test_requirements = base_requirements + [
+    'PIL',
+]
+
 
 setup(
     name='cmsplugin-news',
     version='0.3b',
-    description='This is a news app/plugin for the django-cms 2',
-    author='Harro van der Klauw',
-    author_email='hvdklauw@gmail.com',
-    url='http://bitbucket.org/MrOxiMoron/cmsplugin-news/',
-    packages=find_packages(),
+    description='Simple news plugin for django-cms 2.x',
+    long_description=open('README.rst').read(),
+    author='Horst Gutmann',
+    author_email='zerok@zerokspot.com',
+    url='http://bitbucket.org/zerok/cmsplugin-news/',
+    packages=['cmsplugin_news'],
+    license='BSD',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
@@ -18,5 +30,8 @@ setup(
         'Framework :: Django',
     ],
     include_package_data=True,
+    install_requires=install_requirements,
+    tests_require=test_requirements,
+    test_suite='runtests.main',
     zip_safe=False
 )
