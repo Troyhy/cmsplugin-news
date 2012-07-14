@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 base_requirements = [
@@ -18,7 +18,13 @@ setup(
     author='Horst Gutmann',
     author_email='zerok@zerokspot.com',
     url='http://bitbucket.org/zerok/cmsplugin-news/',
-    packages=['cmsplugin_news'],
+    packages=find_packages(),
+    package_data={'cmsplugin_news': [
+        'locale/de/LC_MESSAGES/*',
+        'templates/cmsplugin_news/*.html',
+        'templates/cmsplugin_news/feeds/*.html',
+        'templates/cmsplugin_news/widgets/*.html']
+    },
     license='BSD',
     classifiers=[
         'Development Status :: 4 - Beta',
