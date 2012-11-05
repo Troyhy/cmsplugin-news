@@ -25,18 +25,17 @@ Setup
 Last tested with
 ----------------
 
-* django-cms-2.2
-* django: 1.3.1
+* django-cms-2.2 and 2.3
+* django: 1.3.4
 
 History
 -------
 
-0.4 (unreleased):
-    * Probably a new maintainer
+0.4:
+    * New maintainer
     * RSS/Atom feed
     * CMS menu integration
-    * Upgrade to django-cms 2.2
-    * ...
+    * Upgrade to django-cms 2.2 (and 2.3)
 
 0.3:
     * Moved to beta phase
