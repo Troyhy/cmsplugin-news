@@ -3,10 +3,9 @@
 # This file is distributed under the same license as the cmsplugin_news package.
 # Ales Zabala Alava (Shagi) <shagi@gisa-elkartea.org>, 2012.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: 0.4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-08-08 22:16+0200\n"
 "PO-Revision-Date: 2012-08-08 22:24+0200\n"
