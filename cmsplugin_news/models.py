@@ -40,7 +40,7 @@ class News(models.Model):
     objects = models.Manager()
 
     link = models.URLField(_('Link'), blank=True, null=True,
-        verify_exists=False, help_text=_('This link will be used a absolute url'
+        help_text=_('This link will be used a absolute url'
             ' for this item and replaces the view logic. <br />Note that by'
             ' default this only applies for items with an empty "content"'
             ' field.'))
