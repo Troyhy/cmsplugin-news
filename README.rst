@@ -31,6 +31,9 @@ Last tested with
 History
 -------
 
+0.4.2:
+    * Compatibility fix for Django 1.5
+
 0.4:
     * New maintainer
     * RSS/Atom feed

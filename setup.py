@@ -12,7 +12,7 @@ test_requirements = base_requirements + [
 
 setup(
     name='cmsplugin-news',
-    version='0.4.1',
+    version='0.4.2',
     description='Simple news plugin for django-cms 2.x',
     long_description=open('README.rst').read(),
     author='Horst Gutmann',
