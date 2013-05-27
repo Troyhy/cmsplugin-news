@@ -5,8 +5,9 @@ from django.contrib import admin
 from cmsplugin_news.forms import NewsForm
 from cmsplugin_news.models import News
 
+from cms.admin.placeholderadmin import PlaceholderAdmin
 
-class NewsAdmin(admin.ModelAdmin):
+class NewsAdmin(PlaceholderAdmin):
     """
         Admin for news
     """
@@ -49,4 +50,4 @@ class NewsAdmin(admin.ModelAdmin):
                                             rows_updated) % {'count': rows_updated})
     make_unpublished.short_description = _('Unpublish selected news')
 
-admin.site.register(News, NewsAdmin)
+admin.site.register(News, PlaceholderAdmin)

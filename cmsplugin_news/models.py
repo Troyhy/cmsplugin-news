@@ -6,6 +6,8 @@ from django.core.urlresolvers import reverse
 
 from cms.models import CMSPlugin
 
+from cms.models.fields import PlaceholderField
+
 from . import settings
 
 
@@ -28,7 +30,9 @@ class News(models.Model):
     slug = models.SlugField(_('Slug'), unique_for_date='pub_date',
                         help_text=_('A slug is a short name which uniquely identifies the news item for this day'))
     excerpt = models.TextField(_('Excerpt'), blank=True)
-    content = models.TextField(_('Content'), blank=True)
+    #content = models.TextField(_('Content'), blank=True)
+
+    content_placeholder = PlaceholderField('content_placeholder')
 
     is_published = models.BooleanField(_('Published'), default=False)
     pub_date = models.DateTimeField(_('Publication date'), default=datetime.datetime.now)
