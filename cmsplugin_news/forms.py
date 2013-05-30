@@ -26,4 +26,3 @@ class NewsForm(forms.ModelForm):
         super(NewsForm, self).__init__(*args, **kwargs)
         widget = self._get_widget()
         self.fields['excerpt'].widget = widget
-        self.fields['content'].widget = widget

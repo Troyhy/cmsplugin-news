@@ -32,7 +32,7 @@ class News(models.Model):
     excerpt = models.TextField(_('Excerpt'), blank=True)
     #content = models.TextField(_('Content'), blank=True)
 
-    content_placeholder = PlaceholderField('content_placeholder')
+    content_placeholder = PlaceholderField('content_placeholder', null=True)
 
     is_published = models.BooleanField(_('Published'), default=False)
     pub_date = models.DateTimeField(_('Publication date'), default=datetime.datetime.now)
